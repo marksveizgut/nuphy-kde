@@ -1,0 +1,14 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": {
+    "Id": "local.nuphy.lighting",
+    "Name": "NuPhy Lighting",
+    "Description": "Air75 HE lighting effects and keyboard brightness",
+    "Icon": "input-keyboard",
+    "Version": "1.0",
+    "License": "MIT",
+    "Category": "Utilities",
+    "Authors": [{"Name": "NuPhy Backlight contributors"}]
+  },
+  "X-Plasma-API-Minimum-Version": "6.8"
+}

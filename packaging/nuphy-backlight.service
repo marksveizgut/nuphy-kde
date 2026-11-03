@@ -1,0 +1,32 @@
+[Unit]
+Description=NuPhy Air75 HE keyboard backlight bridge
+After=systemd-modules-load.service
+Before=upower.service
+
+[Service]
+Type=notify
+StateDirectory=nuphy-backlight
+StateDirectoryMode=0700
+ExecStart=/usr/local/bin/nuphy-backlight
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=15
+TimeoutStopSec=5
+NoNewPrivileges=yes
+CapabilityBoundingSet=
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ProtectControlGroups=yes
+ProtectKernelModules=yes
+RestrictSUIDSGID=yes
+RestrictRealtime=yes
+LockPersonality=yes
+RestrictAddressFamilies=AF_UNIX
+DevicePolicy=closed
+DeviceAllow=/dev/uleds rw
+DeviceAllow=char-hidraw rw
+ReadWritePaths=/run
+
+[Install]
+WantedBy=multi-user.target
